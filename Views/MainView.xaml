@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="DarkGray">
     <Grid>
         <TabControl>
-            <TabItem Header="Patient Info" FontSize="16">
+            <TabItem Header="Patient Info" FontSize="14">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -17,6 +17,9 @@
                     <local:PatientView DataContext="{Binding PatientViewModel.PatientInfo}"/>
                     <local:PlanView DataContext="{Binding PlanViewModel.PlanInfo}" Grid.Column="1"/>
                 </Grid>
+            </TabItem>
+            <TabItem Header="Field Info" FontSize="14">
+                <local:FieldView DataContext="{Binding FieldViewModel}"/>
             </TabItem>
         </TabControl>
     </Grid>
